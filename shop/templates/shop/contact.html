@@ -1,0 +1,57 @@
+{%  extends "shop/header.html" %}
+{% load static %}
+
+{% block content %}
+    <style>
+        .info-item{
+            text-decoration: none;
+            border: 1px solid #dddddd;
+            background-color: #f6f6f6;
+            padding: 2%;
+            min-height: 5rem;
+            text-align: center;
+        }
+        .info-item p{
+            font-weight: bold;
+            font-family: "Bebas Neue";
+            font-size: 200%;
+        }
+        .info-item span{
+            font-size: 150%;
+        }
+        .container{
+            margin-top: 10%;
+            margin-bottom: 20%;
+        }
+    </style>
+<br>
+<div class="container" style="background-color: #eaeaea">
+   <div class="row">
+       <div class="col-lg-3 info-item">
+
+               <p>EMAIL</p>
+               <span>elite.vigor@gmail.com</span>
+
+       </div>
+        <div class="col-lg-3 info-item">
+
+               <p>FaceBook</p>
+               <span>Elite Vigor</span>
+
+        </div>
+         <div class="col-lg-3 info-item">
+
+               <p>Instagram</p>
+               <span>@elitevigor</span>
+
+         </div>
+         <div class="col-lg-3 info-item">
+
+               <p>Twitter</p>
+               <span>@EliteVigor</span>
+
+         </div>
+       </div>
+   </div>
+</div>
+{% endblock content %}

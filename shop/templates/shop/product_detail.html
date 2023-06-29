@@ -1,0 +1,81 @@
+{% extends "shop/header.html" %}
+
+{% block content %}
+    <style>
+        .mybutton{
+            background-color: lightgrey;
+            border: 2px solid black;
+            color: black;
+            font-weight: bold;
+        }
+        .mybutton:hover{
+                background-color: #7d0ed6;
+                color: white;
+                font-weight: bold;
+                border: 2px solid white;
+        }
+        .images{
+            width: 30%;
+            height: 30%;
+            max-height: 500px;
+        }
+        .bg-purple{
+            background-color: #6509ad;
+        }
+        .info-list{
+            display: flex;
+            list-style: none;
+        }
+        .info-item{
+            text-decoration: none;
+            border: 1px solid #dddddd;
+            background-color: #f6f6f6;
+            padding: 5px;
+            min-height: 5rem;
+            text-align: center;
+        }
+        .info-item p{
+            font-weight: bold;
+            font-family: "Bebas Neue";
+            font-size: 150%;
+        }
+        .featured-content{
+            border: 1px solid lightgrey;
+            margin: 2%;
+            display: flex;
+        }
+        .text{
+            padding-top: 3%;
+            font-size: 150%;
+        }
+        .purp-button{
+            color: white;
+            font-family: "Bebas Neue";
+            background-color: #6509ad;
+            text-decoration: none;
+            padding: 7px;
+            border-radius: 10px;
+        }
+        .purp-button:hover{
+            text-decoration: none;
+            color: #dddddd;
+        }
+    </style>
+<div class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="featured-content">
+                <img class="images" src="{{ product.image.url }}">
+                <div class="text">
+                    <h2 style="font-family: 'Bebas Neue'; margin-top: 3%">{{ product.name }}</h2>
+                    <p>Producer: {{ product.producer }}</p>
+                    <p>{{ product.details|linebreaksbr }}</p>
+                    <p>Price: {{ product.price }} den</p>
+                    <hr>
+                    <a class="purp-button" href="{% url 'add_to_cart' product.id %}">Add To Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

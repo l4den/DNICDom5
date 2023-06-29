@@ -1,0 +1,82 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/main.css' %}">
+    <style>
+        .landing-bg{
+            background-image: url("{% static 'images/big_arm_blurred.png' %}");
+            min-height: 61rem;
+            width: 100%;
+        }
+        .banner{
+            text-align: center;
+            padding-top: 10%;
+        }
+        .logo-text{
+            font-family: "Bebas Neue";
+            font-size: 140px;
+            background-color: #5f5b5b;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: black;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: -1px;
+            border-radius: 5px;
+
+        }
+        .purple-text{
+            color: #6509ad;
+        }
+        .conquer{
+            color: white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            font-family: "Bebas Neue";
+            font-size: 60px;
+        }
+        .potential{
+            color: white;
+            font-family: "Bebas Neue";
+            font-size: 60px;
+            background-color: black;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: -5px;
+        }
+        .purple-button{
+            background-color: #6509ad;
+            color: white;
+            font-family: "Bebas Neue";
+            font-size: 60px;
+            padding: 10px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        a:hover{
+            color: lightgrey;
+        }
+    </style>
+    <title>Elite Vigor</title>
+</head>
+<body>
+<div class="container-fluid landing-bg">
+    <div class="banner">
+            <div>
+                <span class="logo-text">ELITE <span class="purple-text">VIGOR</span></span>
+            </div>
+            <p class="conquer">CONQUER YOUR BODY</p>
+            <div style="margin-top: -40px">
+                <span class="potential">UNLOCK YOUR FULL POTENTIAL</span>
+            </div>
+        <br>
+        <br>
+        <a class="purple-button" href="{% url 'menu-page' %}">SHOP NOW</a>
+    </div>
+</div>
+
+</body>
+</html>

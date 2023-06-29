@@ -1,0 +1,17 @@
+{%  extends "shop/header.html" %}
+
+{% block content %}
+    <div class="content">
+        <h2>Cart</h2>
+        <ul>
+            {% for cart_item in cart_items %}
+                <li>
+                    {{ cart_item.product.name }} (Quantity: {{ cart_item.quantity }})
+                    <br>
+                    Price per item: {{ cart_item.product.price }}
+                </li>
+            {% endfor %}
+        </ul>
+        <p>Total Price: {{ total_price }}</p>
+    </div>
+{% endblock content %}

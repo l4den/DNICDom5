@@ -1,0 +1,134 @@
+{%  extends "shop/header.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <style>
+        .mybutton{
+            background-color: lightgrey;
+            border: 2px solid black;
+            color: black;
+            font-weight: bold;
+        }
+        .mybutton:hover{
+                background-color: #7d0ed6;
+                color: white;
+                font-weight: bold;
+                border: 2px solid white;
+        }
+        .payment-form{
+            width: 50%;
+        }
+        .loading-bar{
+            background: cornflowerblue;
+            color: white;
+            font-weight: bold;
+            padding-top: 2px;
+        }
+        .pay-input{
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #c7c7c7;
+            margin-bottom: 10px;
+        }
+        label{
+            font-weight: bold;
+        }
+
+        .total-sum{
+            background-color: #95d195;
+            width: 100%;
+            padding: 5px 30% 1px 30%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .total-text{
+            text-align: center;
+            color: #95d195;
+            background-color: white;
+            border-radius: 10px;
+            width: 100%;
+            font-weight: bold;
+        }
+        .payment-button{
+            text-align: center;
+            border-radius: 5px;
+            background-color: #428bca;
+            font-weight: bold;
+            color: white;
+            width: 100%;
+            border: none;
+            padding: 5px 45% 5px 45%;
+        }
+    </style>
+
+    <div class="container">
+
+        <div class="payment-form">
+            <hr>
+            <br>
+            <form method="get" action="">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label>Name on Card</label>
+                        <br>
+                        <input type="text" class="pay-input">
+                    </div>
+                    <br>
+                    <div class="col-lg-12">
+                        <label>Card Number</label>
+                        <br>
+                        <input type="text" class="pay-input">
+                    </div>
+                    <br>
+                    <div class="col-lg-12">
+                        <label>Billing Address</label>
+                        <br>
+                        <input type="text" class="pay-input">
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label>CCV</label>
+                        <br>
+                        <input type="password" class="pay-input" placeholder="ex. 311">
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label>Expiration</label>
+                        <br>
+                        <input type="text" class="pay-input" placeholder="MM">
+                    </div>
+
+                    <div class="col-lg-4">
+                        <br>
+                        <input type="text" class="pay-input" placeholder="YYYY">
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div class="col-lg-12">
+                        <p style="text-align: center; font-weight: bold">Your total is: {{ total_price }} den</p>
+                        <a class="payment-button" href="{% url 'thanks' %}">Pay</a>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </div>
+     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+{% endblock content %}

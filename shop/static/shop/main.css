@@ -1,0 +1,6 @@
+{% load static%}
+.landing-bg{
+    background-image: url("{% static 'images/big_arm_blurred.png' %}");
+    height: 100%;
+    width: 100%;
+}

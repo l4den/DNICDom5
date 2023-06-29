@@ -1,0 +1,71 @@
+{%  extends "shop/header.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .mybutton{
+            background-color: lightgrey;
+            border: 2px solid black;
+            color: black;
+            font-weight: bold;
+        }
+        .mybutton:hover{
+            background-color: #7d0ed6;
+            color: white;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+        .content{
+            margin: 3%;
+            border: 1px solid lightgrey;
+            padding: 2%;
+            width: 25%;
+            min-width: 228px;
+        }
+        .purp-button{
+            margin-top: 10px;
+            color: white;
+            font-family: "Bebas Neue";
+            background-color: #6509ad;
+            text-decoration: none;
+            padding: 7px;
+            border-radius: 10px;
+            border: none;
+        }
+        .purp-button:hover{
+            text-decoration: none;
+            color: #dddddd;
+        }
+    </style>
+
+    <div class="contaier">
+        <div class="row">
+            <div class="content">
+                <form id="shipping-form" action="{% url 'payment' %}">
+                    <legend>Enter Shipping Information</legend>
+                    <p>First Name:</p>
+                    <input type="text" required>
+                        <hr>
+                    <p>Last Name:</p>
+                    <input type="text" required>
+                    <hr>
+                    <p>City:</p>
+                    <input type="text" required>
+                    <hr>
+                    <p>Postal Code:</p>
+                    <input type="text" placeholder="eg. 1000" required>
+                    <hr>
+                    <p>Address:</p>
+                    <input type="text" required>
+                    <hr>
+                    <p>Phone Number:</p>
+                    <input type="text" required>
+                    <div>
+                        <input type="submit" class="purp-button">
+                    </div>
+                </form>
+                <br>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
